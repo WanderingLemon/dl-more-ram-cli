@@ -3,7 +3,11 @@
 using namespace std;
 
 int main(int argv, char** args) {
-    string hello = "Hello, World!\n";
-    cout << hello;
+    cout << "Number of arguments input: " << argv << endl;
+
+    // Goes through all arguments
+    for(int i = 0; i < argv; args++, i++ ){
+        cout <<"["<<i<<"] "<< *args << endl;
+    }
     return 0;
 }

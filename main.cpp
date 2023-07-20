@@ -5,6 +5,8 @@
 #include <iostream> // for writing to stdio
 #include <random>
 #include <unistd.h>
+#include "Utils.h"
+
 
 using namespace std;
 
@@ -17,12 +19,9 @@ int main(int argv, char** args) {
     }
 
     // RNG settings
-    random_device rd;
-    default_random_engine engine(rd());
-    uniform_int_distribution<int> distribution(100,2000);
+    Utils utils;
 
-    int rand = distribution(engine);
-    cout << rand << endl;
+    cout << utils.rand(1,100) << endl;
 
 
     return 0;

@@ -3,4 +3,4 @@ project(dl-more-ram-cli)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(dl-more-ram-cli main.cpp utils.h)
+add_executable(dl-more-ram-cli main.cpp Utils.cpp Utils.h)

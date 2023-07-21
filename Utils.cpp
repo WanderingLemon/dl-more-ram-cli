@@ -26,9 +26,9 @@ Utils::Utils(){
 }
 
 Utils::Utils(int amountOfRam, string typeOfRam) {
-    this->amountOfRam = amountOfRam;
+//    this->amountOfRam = amountOfRam;
     this->typeOfRam = std::move(typeOfRam);
-    this->unitOfRam = 'G';
+//    this->unitOfRam = 'G';
 
     random_device randomDevice;
     randEngine = default_random_engine(randomDevice());
@@ -36,9 +36,9 @@ Utils::Utils(int amountOfRam, string typeOfRam) {
 }
 
 Utils::Utils(int amountOfRam, string typeOfRam, char unitOfRam) {
-    this->amountOfRam = amountOfRam;
+//    this->amountOfRam = amountOfRam;
     this->typeOfRam = std::move(typeOfRam);
-    this->unitOfRam = unitOfRam;
+//    this->unitOfRam = unitOfRam;
 
     random_device randomDevice;
     randEngine = default_random_engine(randomDevice());

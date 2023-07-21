@@ -43,7 +43,8 @@ int main(int argv, char** args) {
         if(arg[0] == '-'){
             // Checks for various flags starting with '-'
             switch (arg[1]) {
-                case 'U':
+                case 'U':{
+
                     i++;
                     // Checks that the -U flag has an argument/value
                     if(argv-i == 0){
@@ -51,23 +52,18 @@ int main(int argv, char** args) {
                         return -105;
                     }
                     args++;
-                    // Checks for the unit of measures
-                    switch(**args){
-                        case 'K':
-                            unit = 'K';
-                            break;
-                        case 'M':
-                            unit = 'M';
-                            break;
-                        case 'G':
-                            unit = 'G';
-                            break;
-                        default:
-                            cerr << "ERROR: The letter " << **args << "is not a valid unit of measure" <<
-                                    " it needs to be K,M, or G!";
-                            return -106;
+
+                    // Checks that the Unit is valid
+                    regex argRegex("[MKG]");
+                    if(!regex_match(*args,argRegex)){
+                        cerr << "ERROR: The letter " << **args << "is not a valid unit of measure" <<
+                                " it needs to be K,M, or G!";
+                        return -106;
                     }
+
+                    unit = **args;
                     break;
+                }
                 default:
                     cerr << "ERROR:Unknown option flag '-" << arg[1] << "'!\n";
                     return -104;

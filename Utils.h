@@ -25,7 +25,7 @@ public:
 
 private:
 //    int amountOfRam{};
-    std::string typeOfRam;
+//    std::string typeOfRam;
 //    char unitOfRam{};
     std::default_random_engine randEngine;
 //    std::uniform_int_distribution<int> randDist; // Look at this later

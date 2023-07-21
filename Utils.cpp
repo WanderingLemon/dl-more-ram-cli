@@ -27,7 +27,7 @@ Utils::Utils(){
 
 Utils::Utils(int amountOfRam, string typeOfRam) {
 //    this->amountOfRam = amountOfRam;
-    this->typeOfRam = std::move(typeOfRam);
+//    this->typeOfRam = std::move(typeOfRam);
 //    this->unitOfRam = 'G';
 
     random_device randomDevice;
@@ -37,7 +37,7 @@ Utils::Utils(int amountOfRam, string typeOfRam) {
 
 Utils::Utils(int amountOfRam, string typeOfRam, char unitOfRam) {
 //    this->amountOfRam = amountOfRam;
-    this->typeOfRam = std::move(typeOfRam);
+//    this->typeOfRam = std::move(typeOfRam);
 //    this->unitOfRam = unitOfRam;
 
     random_device randomDevice;

@@ -13,8 +13,6 @@ class Utils {
 public:
     // Constructors
     Utils();
-    Utils(int amountOfRam, std::string typeOfRam);
-    Utils(int amountOfRam, std::string typeOfRam, char unitOfRam);
 
     // Misc
     int rand(int lb, int ub);
